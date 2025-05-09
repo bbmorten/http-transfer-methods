@@ -1,0 +1,11 @@
+services:
+  node-app:
+    build: .
+    container_name: node-app
+    volumes:
+      - .:/usr/src/app
+    ports:
+      - "30000:3000"
+      - "30001:3001"
+    environment:
+    - ENTRY_FILE=${ENTRY_FILE:-traditional-server.js}

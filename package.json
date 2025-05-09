@@ -1,0 +1,16 @@
+{
+  "name": "http-transfer-methods",
+  "version": "1.0.0",
+  "description": "",
+  "main": "traditional-server-64.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "follow-redirects": "^1.15.9"
+  }
+}
