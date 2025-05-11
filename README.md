@@ -33,6 +33,16 @@ This project demonstrates various HTTP transfer methods and includes tools for t
 - `websocket-server.js` - WebSocket server implementation
 - `test_websocket_server.sh` - Test script for the WebSocket server
 
+### 6. Server-Sent Events (SSE)
+
+- `sse-server.js` - Server-Sent Events (SSE) server implementation
+- `test_sse_server.sh` - Test script for the SSE server
+
+### 7. HTTP Range Requests
+
+- `range-server.js` - HTTP server supporting range requests
+- `test_range_server.sh` - Test script for the range request server
+
 ## Prerequisites
 
 1. Node.js installed
@@ -100,6 +110,50 @@ The script will:
 1. Launch the WebSocket server
 1. Test the HTTP endpoint using `curl`
 1. Test the WebSocket endpoint using `websocat`
+1. Save the captured traffic to a `.pcap` file
+1. Open Wireshark for analysis
+
+### Testing SSE Server
+
+```bash
+./test_sse_server.sh <interface> sse-server.js localhost 3004 30
+```
+
+Parameters:
+
+- `interface`: Network interface to capture (e.g., `lo0` for localhost)
+- `node_file`: The SSE server file to run
+- `hostname`: The hostname (e.g., `localhost`)
+- `port`: The port number (e.g., `3004`)
+- `duration`: Duration of the test in seconds
+
+The script will:
+
+1. Start packet capture using `tshark`
+1. Launch the SSE server
+1. Test the SSE endpoint using `curl`
+1. Save the captured traffic to a `.pcap` file
+1. Open Wireshark for analysis
+
+### Testing Range Request Server
+
+```bash
+./test_range_server.sh <interface> range-server.js localhost 3005 30
+```
+
+Parameters:
+
+- `interface`: Network interface to capture (e.g., `lo0` for localhost)
+- `node_file`: The range request server file to run
+- `hostname`: The hostname (e.g., `localhost`)
+- `port`: The port number (e.g., `3005`)
+- `duration`: Duration of the test in seconds
+
+The script will:
+
+1. Start packet capture using `tshark`
+1. Launch the range request server
+1. Test range requests using `curl` (e.g., partial and full file downloads)
 1. Save the captured traffic to a `.pcap` file
 1. Open Wireshark for analysis
 
