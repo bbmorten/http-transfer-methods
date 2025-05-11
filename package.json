@@ -12,6 +12,8 @@
   "type": "commonjs",
   "dependencies": {
     "follow-redirects": "^1.15.9",
+    "websocat": "^1.1.0",
+    "ws": "^8.18.2",
     "youtube-dl-exec": "^3.0.21",
     "yt-dlp-exec": "^1.0.2",
     "ytdl-core": "^4.11.5"

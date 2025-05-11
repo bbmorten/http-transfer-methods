@@ -28,6 +28,11 @@ This project demonstrates various HTTP transfer methods and includes tools for t
 - `download-all.sh` - Batch download script
 - `print-codecs.sh` - Tool for analyzing video codecs
 
+### 5. WebSocket Server
+
+- `websocket-server.js` - WebSocket server implementation
+- `test_websocket_server.sh` - Test script for the WebSocket server
+
 ## Prerequisites
 
 1. Node.js installed
@@ -38,14 +43,14 @@ This project demonstrates various HTTP transfer methods and includes tools for t
 
 ## Setup
 
-First, generate SSL certificates for HTTPS:
+1. Generate SSL certificates for HTTPS:
 
 ```bash
 openssl req -x509 -newkey rsa:2048 -nodes -sha256 -subj '/CN=localhost' \
 -keyout localhost-key.pem -out localhost-cert.pem
 ```
 
-Then, install dependencies:
+1. Install dependencies:
 
 ```bash
 npm install
@@ -74,6 +79,39 @@ The script will:
 3. Send test requests using curl
 4. Capture SSL session keys for analysis
 5. Open Wireshark with the captured traffic
+
+### Testing WebSocket Server
+
+```bash
+./test_websocket_server.sh <interface> websocket-server.js localhost 3003 30
+```
+
+Parameters:
+
+- `interface`: Network interface to capture (e.g., `lo0` for localhost)
+- `node_file`: The WebSocket server file to run
+- `hostname`: The hostname (e.g., `localhost`)
+- `port`: The port number (e.g., `3003`)
+- `duration`: Duration of the test in seconds
+
+The script will:
+
+1. Start packet capture using `tshark`
+1. Launch the WebSocket server
+1. Test the HTTP endpoint using `curl`
+1. Test the WebSocket endpoint using `websocat`
+1. Save the captured traffic to a `.pcap` file
+1. Open Wireshark for analysis
+
+### Notes
+
+- Ensure `websocat` is installed for WebSocket testing. Install it using:
+
+  ```bash
+  brew install websocat
+  ```
+
+- Captured traffic is saved in the `captures/` directory with a timestamped filename.
 
 ### YouTube Downloads
 
