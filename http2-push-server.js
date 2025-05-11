@@ -2,9 +2,12 @@
 // 3. HTTP/2 Server Push
 // ---------------------------
 // Save as http2-push-server.js
+// NODE_OPTIONS="--tls-keylog=./sslkeys.log" node http2-push-server.js 
 const http2 = require('http2');
 const fs = require('fs');
 const path = require('path');
+
+
 
 // Create self-signed certificate for HTTPS (required for HTTP/2)
 // You need to generate these files:
@@ -15,6 +18,7 @@ const server = http2.createSecureServer({
   cert: fs.readFileSync('localhost-cert.pem')
 });
 
+// Removed HTTP/2 server push functionality and serve CSS file normally
 server.on('stream', (stream, headers) => {
   if (headers[':path'] === '/') {
     // Respond to the original request
@@ -34,20 +38,10 @@ server.on('stream', (stream, headers) => {
         </body>
       </html>`;
 
-    // Push the CSS file before it's requested
-    const pushStream = stream.pushStream({ ':path': '/style.css' }, (err, pushStream) => {
-      if (err) throw err;
-      pushStream.respond({
-        ':status': 200,
-        'content-type': 'text/css'
-      });
-      pushStream.end('.h1 { color: red; }');
-    });
-
     // Send the HTML response
     stream.end(html);
   } else if (headers[':path'] === '/style.css') {
-    // Handle direct requests for the CSS file
+    // Serve the CSS file normally
     stream.respond({
       ':status': 200,
       'content-type': 'text/css'
