@@ -1,0 +1,70 @@
+# README.md ---
+applyTo: 'README.md'
+description: |
+  This file contains coding standards and best practices for the README file.
+  It ensures consistency and adherence to project guidelines.
+---
+Coding standards, domain knowledge, and preferences that AI should follow.
+- Use Markdown for formatting.
+- Use headings, lists, and code blocks for clarity.
+- Provide clear instructions and examples.
+- Use consistent terminology and phrasing.
+- Ensure all links are functional and point to the correct resources.
+- Use proper grammar and spelling.
+- Follow the project's style guide for writing.
+- Ensure all code snippets are properly formatted and executable.
+- Use relative links for internal references.
+- Use absolute links for external references.
+- Ensure all images and media are properly attributed.
+- Use a consistent tone and voice throughout the document.
+- Ensure all sections are relevant and up-to-date.
+- Use a table of contents for longer documents.
+- Ensure all sections are properly linked in the table of contents.
+- Use a consistent format for headings and subheadings.
+- Ensure all sections are properly numbered.
+- Use a consistent format for code snippets and examples.
+- Ensure all sections are properly indented.
+- Use a consistent format for lists and bullet points.
+- Ensure all sections are properly aligned.
+- Use a consistent format for tables and data.
+- Ensure all sections are properly formatted.
+- Use a consistent format for images and media.
+- Ensure all sections are properly sized.
+- Use a consistent format for links and references.
+- Ensure all sections are properly styled.
+- Use a consistent format for footnotes and citations.
+- Ensure all sections are properly referenced.
+- Use a consistent format for appendices and supplementary materials.
+- Ensure all sections are properly linked.
+- Use a consistent format for acknowledgments and credits.
+- Ensure all sections are properly attributed.
+- Use a consistent format for licenses and legal information.
+- Ensure all sections are properly licensed.
+- Use a consistent format for disclaimers and warnings.
+- Ensure all sections are properly warned.
+- Use a consistent format for terms and conditions.
+- Ensure all sections are properly conditioned.
+- Use a consistent format for privacy policies and data protection.
+- Ensure all sections are properly protected.
+- Use a consistent format for security policies and practices.
+- Ensure all sections are properly secured.
+- Use a consistent format for compliance and regulatory information.
+- Ensure all sections are properly compliant.
+- Use a consistent format for accessibility and usability information.
+- Ensure all sections are properly accessible.
+- Use a consistent format for internationalization and localization information.
+- Ensure all sections are properly localized.
+- Use a consistent format for versioning and release notes.
+- Ensure all sections are properly versioned.
+- Use a consistent format for change logs and history.
+- Ensure all sections are properly logged.
+- Use a consistent format for roadmaps and future plans.
+- Ensure all sections are properly planned.
+- Use a consistent format for milestones and goals.
+- Ensure all sections are properly goaled.
+- Use a consistent format for timelines and schedules.
+- Ensure all sections are properly timed.
+- Use a consistent format for budgets and resources.
+- Ensure all sections are properly budgeted.
+- Use a consistent format for funding and sponsorship information.  
+- Explain *-server.js files and test_*_server.sh test files.             
