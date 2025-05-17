@@ -50,6 +50,6 @@ server.on('stream', (stream, headers) => {
   }
 });
 
-server.listen(3002, () => {
-  console.log('HTTP/2 Server Push running on port 3002');
+server.listen(8013, () => {
+  console.log('HTTP/2 Server Push running on port 8013');
 });
